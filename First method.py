@@ -500,7 +500,7 @@ for t in timeax:
     e = state[0] / e_max
     de = (state[1] - state[3]) / de_max
     e_noisy = np.clip(e + np.random.normal(0, 0.08),-1, 1)
-    de_noisy = np.clip(de + np.random.normal(0, 0.07)-1, 1)
+    de_noisy = np.clip(de + np.random.normal(0, 0.07),-1, 1)
     u = singleton_fuzzy_inference(e_noisy, de_noisy)
     fa = u * f_max
     k1 = dynamics(t, state, fa)
