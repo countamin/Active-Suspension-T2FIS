@@ -516,7 +516,7 @@ history = np.array(history)
 end_time = time.perf_counter()
 
 total_simulation_time = end_time - start_time
-print(f"\n RK4: {total_simulation_time:.4f} ")
+print(f"\nSimulation Time: "f"{total_simulation_time:.4f} seconds")
 
 def calculate_metrics_t2fs(acc_data, xs_data, force_data, t_axis):
     acc_arr = np.array(acc_data)
