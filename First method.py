@@ -415,7 +415,6 @@ def safe(func, universe):
 
 labels = ['NB', 'NS', 'ZE', 'PS', 'PB']
 
-# فقط برای Antecedentها عضویت تعریف می‌کنیم
 for var in [error, delta_error]:
     var['NB'] = safe(A1, var.universe)
     var['NS'] = safe(A2, var.universe)
@@ -517,7 +516,7 @@ history = np.array(history)
 end_time = time.perf_counter()
 
 total_simulation_time = end_time - start_time
-print(f"\nزمان کل اجرای شبیه‌سازی RK4: {total_simulation_time:.4f} ثانیه")
+print(f"\n RK4: {total_simulation_time:.4f} ")
 
 def calculate_metrics_t2fs(acc_data, xs_data, force_data, t_axis):
     acc_arr = np.array(acc_data)
